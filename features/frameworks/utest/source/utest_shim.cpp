@@ -59,6 +59,7 @@ utest_v1_scheduler_t utest_v1_get_scheduler()
 #   include "mbed-hal/us_ticker_api.h"
 #else
 #   include "mbed.h"
+using mbed::Timeout;
 #endif
 
 // only one callback is active at any given time

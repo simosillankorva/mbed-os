@@ -22,6 +22,7 @@
 #include "mbed_poll.h"
 #include "mbed_debug.h"
 
+using namespace mbed;
 #ifdef LF
 #undef LF
 #define LF  10

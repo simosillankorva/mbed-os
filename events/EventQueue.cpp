@@ -18,6 +18,8 @@
 #include "events/mbed_events.h"
 #include "mbed.h"
 
+using namespace events;
+using namespace mbed;
 
 EventQueue::EventQueue(unsigned event_size, unsigned char *event_pointer) {
     if (!event_pointer) {

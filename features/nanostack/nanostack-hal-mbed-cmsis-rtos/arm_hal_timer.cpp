@@ -23,6 +23,9 @@
 #include "platform/arm_hal_interrupt.h"
 #include <mbed_assert.h>
 
+using namespace mbed;
+using namespace events;
+
 static SingletonPtr<Timer> timer;
 static SingletonPtr<Timeout> timeout;
 

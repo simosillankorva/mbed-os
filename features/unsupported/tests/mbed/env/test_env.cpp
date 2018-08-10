@@ -1,5 +1,6 @@
 #include "test_env.h"
 
+using namespace mbed;
 // Const strings used in test_end
 const char* TEST_ENV_START = "start";
 const char* TEST_ENV_SUCCESS = "success";

@@ -17,6 +17,7 @@
 #include "TCPServer.h"
 #include "mbed.h"
 
+using namespace mbed;
 TCPServer::TCPServer()
 {
 }

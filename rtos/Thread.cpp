@@ -72,7 +72,7 @@ void Thread::constructor(osPriority priority,
     constructor(MBED_TZ_DEFAULT_ACCESS, priority, stack_size, stack_mem, name);
 }
 
-void Thread::constructor(Callback<void()> task,
+void Thread::constructor(mbed::Callback<void()> task,
         osPriority priority, uint32_t stack_size, unsigned char *stack_mem, const char *name) {
     constructor(MBED_TZ_DEFAULT_ACCESS, priority, stack_size, stack_mem, name);
 
@@ -90,7 +90,7 @@ void Thread::constructor(Callback<void()> task,
     }
 }
 
-osStatus Thread::start(Callback<void()> task) {
+osStatus Thread::start(mbed::Callback<void()> task) {
     _mutex.lock();
 
     if ((_tid != 0) || _finished) {

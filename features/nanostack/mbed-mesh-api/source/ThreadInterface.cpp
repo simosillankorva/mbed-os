@@ -79,7 +79,7 @@ Nanostack::ThreadInterface *ThreadInterface::get_interface() const
 int ThreadInterface::connect()
 {
     if (!_interface) {
-        _interface = new (nothrow) Nanostack::ThreadInterface(*_phy);
+        _interface = new (std::nothrow) Nanostack::ThreadInterface(*_phy);
         if (!_interface) {
             return NSAPI_ERROR_NO_MEMORY;
         }
