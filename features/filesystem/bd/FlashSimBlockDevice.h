@@ -145,4 +145,9 @@ private:
 /** @}*/
 } // namespace mbed
 
+// Added "using" for backwards compatibility
+#ifndef MBED_NO_NAMESPACE
+using mbed::FlashSimBlockDevice;
+#endif
+
 #endif
