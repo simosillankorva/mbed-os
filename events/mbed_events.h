@@ -30,7 +30,9 @@
 
 #include "events/mbed_shared_queues.h"
 
+#ifndef MBED_NO_NAMESPACE
 using namespace events;
+#endif
 
 #endif
 

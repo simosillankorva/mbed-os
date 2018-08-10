@@ -101,7 +101,9 @@
 #include "platform/FunctionPointer.h"
 #include "platform/ScopedLock.h"
 
+#ifndef MBED_NO_NAMESPACE
 using namespace mbed;
 using namespace std;
+#endif
 
 #endif
