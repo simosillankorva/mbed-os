@@ -165,6 +165,14 @@ static struct equeue_event *equeue_mem_alloc(equeue_t *q, size_t size) {
 static void equeue_mem_dealloc(equeue_t *q, struct equeue_event *e) {
     equeue_mutex_lock(&q->memlock);
 
+    // If possible combine with slab
+    if ((((char*)e) + e->size) == q->slab.data) {
+        q->slab.data -= e->size;
+        q->slab.size += e->size;
+        equeue_mutex_unlock(&q->memlock);
+        return;
+    }
+
     // stick chunk into list of chunks
     struct equeue_event **p = &q->chunks;
     while (*p && (*p)->size < e->size) {
